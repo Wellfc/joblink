@@ -113,11 +113,14 @@ input[type=text]:hover, input[type=password]:hover {
 }
 
 .invalid-message {
-  visibility: hidden;
   margin: 10px 0;
   font-size: 14px;
   font-weight: 500;
   color: var(--accent-red);
+}
+
+.hidden {
+  visibility: hidden;
 }
 
 .buttons-container {
