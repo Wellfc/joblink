@@ -19,12 +19,13 @@ header div {
   align-items: center;
 }
 
-.header-logo-container {
-  width: 40px;
+.header-logo-container a {
+  width: 90px;
+  font-size: 3rem;
+  font-weight: 700;
 }
 
-.header-profile-thumbnail,
-.header-logo-image {
+.header-profile-thumbnail {
   width: 40px;
   border-radius: 50%;
 }
@@ -86,14 +87,14 @@ main {
 .main-grid-container {
   padding: 2rem 0;
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr;
   gap: 2rem;
 }
 
 /* * Profile Card ----------------------------------------------------------- */
 
 .profile-card-container {
-	height: 280px;
+  height: 280px;
   display: grid;
   place-items: start;
   justify-items: center;
@@ -224,13 +225,58 @@ main {
   padding: 1rem;
   border: 1px solid var(--light-gray);
   border-radius: 5px;
-  margin: 1rem auto;
+  margin: 2rem auto;
   gap: 1rem;
+}
+
+.post-header-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.post-photo-and-information {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.post-photo-and-information > div > p:first-child {
+  font-weight: 600;
+}
+
+.post-photo-and-information > div > p:last-child {
+  color: var(--medium-gray);
+}
+
+.post-header-container img {
+  width: 60px;
+  border-radius: 50%;
+}
+
+.post-header-container div:last-child {
+  font-size: 1.2rem;
+}
+
+.post-header-container div:last-child i {
+  font-size: 1.5rem;
+}
+
+.post-options {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: var(--medium-gray);
 }
 
 .post-media-container {
   width: 100%;
   padding: 1.5rem 0.5rem;
+}
+
+.post-media-container p {
+  padding-bottom: 1rem;
 }
 
 .post-media-container > * {
@@ -242,14 +288,23 @@ main {
   justify-content: flex-start;
   align-items: center;
   gap: 2rem;
+  padding: 0 0.5rem;
+}
+
+.fa-heart {
+  color: var(--accent-red);
+}
+
+.fa-share-nodes {
+  color: var(--joblink-blue-dark);
 }
 
 /* * People you may know ---------------------------------------------------- */
 
 .people-you-may-know-container {
   display: grid;
-  place-items: start center;
-  gap: 1rem 0;
+  align-content: start;
+  gap: 2rem 0;
   background-color: var(--white);
   border: 1px solid var(--light-gray);
   border-radius: 0.5rem;
@@ -258,6 +313,52 @@ main {
 
 .people-you-may-know-container p {
   font-weight: 500;
+}
+
+.users-container {
+  display: grid;
+  width: 100%;
+  gap: 2rem;
+}
+
+.user {
+  display: grid;
+  grid-template-columns: 2fr 5fr 1fr;
+  grid-template-rows: 3px 10px;
+  grid-template-areas:
+    "a b c"
+    "a d c ";
+  width: 100%;
+  place-items: center start;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  padding: 2.1rem;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.user li {
+  list-style: none;
+  grid-area: b;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.user img {
+  width: 60px;
+  border-radius: 50%;
+  grid-area: a;
+}
+
+.user li:last-child {
+  color: var(--medium-gray);
+  font-size: 1rem;
+  grid-area: d;
+}
+
+.user .fa-circle-plus {
+  grid-area: c;
+  color: var(--medium-gray);
 }
 
 /* ! Footer ----------------------------------------------------------------- */
