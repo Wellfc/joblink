@@ -37,9 +37,16 @@
 		<div class="container">
 			<div class="header-desktop-nav-bar">
 				<!-- Logo -->
-				<img class="header-logo-image" src="./assets/media/images/logo-image.jpeg" alt="Logo Image">
+				<div class="header-logo-container">
+					<a href="#">
+						<img class="header-logo-image" src="./assets/media/images/logo-image.jpeg" alt="Logo Image">
+					</a>
+				</div>
 				<!-- Search Bar -->
-				<i class="fa-solid fa-magnifying-glass"></i>
+				<div class="header-search-input-container">
+					<i class="fa-solid fa-magnifying-glass"></i>
+					<input type="text" name="search-user" id="search-user" placeholder="Search">
+				</div>
 				<!-- Desktop Nav Bar -->
 				<div class="header-menu-links">
 					<div>
@@ -64,11 +71,12 @@
 					</div>
 				</div>
 				<!-- Profile Thumbnail -->
-				<div class="header-profile-container">
-					<img class="header-profile-thumbnail" src="./assets/media/images/profile-mock.jpeg"
-						alt="Header Profile Photo">
-					<p>Me</p>
-				</div>
+				<a href="#">
+					<div class="header-profile-container">
+						<img class="header-profile-thumbnail" src="./assets/media/images/profile-mock.jpeg"
+							alt="Header Profile Photo">
+					</div>
+				</a>
 			</div>
 			<!-- Mobile Nav Bar -->
 		</div>
