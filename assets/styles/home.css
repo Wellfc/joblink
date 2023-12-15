@@ -17,6 +17,10 @@ header div {
   align-items: center;
 }
 
+.header-logo-container {
+  width: 40px;
+}
+
 .header-profile-thumbnail,
 .header-logo-image {
   width: 40px;
@@ -39,6 +43,7 @@ header div {
 
 .header-profile-container {
   text-align: center;
+  width: 40px;
 }
 
 .header-menu-links {
@@ -80,7 +85,7 @@ main {
 
 footer {
   color: var(--joblink-blue);
-	background-color: var(--lighter-gray);
+  background-color: var(--lighter-gray);
 }
 
 .footer-grid-container {
