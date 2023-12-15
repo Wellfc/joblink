@@ -112,7 +112,7 @@ input[type=text]:hover, input[type=password]:hover {
   color: var(--joblink-blue);
 }
 
-.invalid-message {
+.invalid-login {
   margin: 10px 0;
   font-size: 14px;
   font-weight: 500;

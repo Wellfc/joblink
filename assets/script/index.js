@@ -27,11 +27,18 @@ function validateLogin() {
         window.location.href = 'home.html';
     } else {
         invalidLogin.classList.remove('hidden');
-        sleep(3000).then(() => {
-            invalidLogin.classList.add('hidden');
-        });
+        // sleep(3000).then(() => {
+        //     invalidLogin.classList.add('hidden');
+        // });
     }
 };
 
 // Login button event listener
 onEvent('click', loginButton, validateLogin);
+
+// When the user presses enter, validate the login
+onEvent('keyup', passwordInput, (event) => {
+    if (event.key === 'Enter') {
+        validateLogin();
+    }
+});
