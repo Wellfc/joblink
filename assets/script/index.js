@@ -34,4 +34,4 @@ function validateLogin() {
 };
 
 // Login button event listener
-onEvent(loginButton, 'click', validateLogin);
+onEvent('click', loginButton, validateLogin);
