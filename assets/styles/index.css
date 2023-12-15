@@ -1,0 +1,143 @@
+@import "./global.css";
+
+button {
+  padding: 1.5rem 2.5rem;
+  font-weight: 500;
+  border-radius: 0.4rem;
+}
+
+.button-type-one {
+  background-color: var(--button-primary);
+  border: 0.1rem solid var(--button-border);
+  transition: 0.2s all ease-in-out;
+  color: var(--button-primary-text-color);
+}
+
+.button-type-one:hover {
+  background-color: var(--button-primary-hover);
+  border: 0.1rem solid var(--button-border);
+}
+
+.button-type-two {
+  background-color: var(--button-secondary);
+  border: 0.1rem solid var(--button-border);
+  transition: 0.2s all ease-in-out;
+  color: var(--button-secondary-text-color);
+}
+
+.button-type-two:hover {
+  background-color: var(--button-secondary-hover);
+  border: 0.1rem solid var(--button-border);
+  color: var(--button-primary-text-color);
+}
+
+a {
+    color: var(--link-color);
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}
+
+.copyright {
+  font-size: 1.2rem;
+  color: var(--link-color);
+}
+
+.login-content {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  gap: 5rem;
+  border-radius: 5px;
+  background-color: var(--white);
+}
+
+.login-image {
+  width: 80%;
+  background-image: url(../media/images/joblink-login-image-small.png);
+  background-size: cover;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px; 
+}
+
+.login-image img {
+  width: 20%;
+  border-top-left-radius: 5px; 
+}
+
+.login {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  margin: 200px auto 20px;
+}
+
+.login-title {
+  font-size: 22px;
+  color: var(--joblink-blue);
+}
+
+.user-input {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+input[type=text], input[type=password] {
+  height: 45px;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #ebf2f8;
+  border: 1px solid #ebf2f8;
+  transition: all 0.3s ease-in-out;
+}
+
+input[type=text]:hover, input[type=password]:hover {
+  border-color: var(--link-hover-color);
+}
+
+::placeholder {
+  color: var(--joblink-blue);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.forgot-password {
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--joblink-blue);
+}
+
+.invalid-message {
+  visibility: hidden;
+  margin: 10px 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--accent-red);
+}
+
+.buttons-container {
+  margin-bottom: 50px;
+}
+
+.info-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  font-size: 12px;
+}
+
+.policies {
+  width: 60%;
+  flex-wrap: wrap;
+}
+
+.copyright {
+  margin-right: 20px;
+  display: flex;
+  align-items: flex-end;
+}
