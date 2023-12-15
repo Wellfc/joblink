@@ -1,0 +1,57 @@
+@import url(./global.css);
+
+header {
+  padding: 1rem 0;
+  color: var(--joblink-blue);
+  font-size: 1.5rem;
+}
+
+.header-profile-container {
+  text-align: center;
+}
+
+.header-profile-thumbnail,
+.header-logo-image {
+  width: 40px;
+  border-radius: 50%;
+}
+
+.header-desktop-nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-menu-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.header-menu-links div {
+  width: 10rem;
+  height: 5rem;
+  padding: 0.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.2rem;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  border-radius: 0.5rem;
+  transition: 0.3s all ease-in-out;
+  cursor: pointer;
+}
+
+.header-menu-links div:hover {
+  color: var(--joblink-blue-dark);
+  border-bottom: 1px solid var(--joblink-blue);
+}
+
+/* ! Main */
+
+main {
+  background-color: var(--lighter-gray);
+}
