@@ -28,9 +28,9 @@ header div {
   border: 1px solid var(--joblink-blue);
   padding: 0.5rem 1rem;
   height: 4rem;
-	display: grid;
-	place-items: center;
-	grid-template-columns: 1fr 6fr;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 6fr;
 }
 
 .header-search-input-container i {
@@ -74,4 +74,36 @@ header div {
 
 main {
   background-color: var(--lighter-gray);
+}
+
+/* ! Footer */
+
+footer {
+  color: var(--joblink-blue);
+	background-color: var(--lighter-gray);
+}
+
+.footer-grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.footer-grid-container div {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-grid-container div a {
+  display: inline-block;
+  padding: 0.5rem 0;
+  transition: 0.2s all ease-in-out;
+}
+
+.footer-grid-container div a:hover {
+  text-decoration: underline;
+  color: var(--joblink-blue-dark);
+}
+
+.copyright {
+  padding: 0.5rem 0;
 }
