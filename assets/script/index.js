@@ -34,9 +34,16 @@ function validateLogin() {
 // Login button event listener
 onEvent('click', loginButton, validateLogin);
 
-// When the user presses enter, validate the login
+// When the user presses enter on the password input, validate the login
 onEvent('keyup', passwordInput, (event) => {
-    if (event.key === 'Enter') {
+    if (event.key === 'Enter' && usernameInput.value.trim() !== '') {
+        validateLogin();
+    }
+});
+
+// When the user presses enter on the username input, validate the login
+onEvent('keyup', usernameInput, (event) => {
+    if (event.key === 'Enter' && passwordInput.value.trim() !== '') {
         validateLogin();
     }
 });
