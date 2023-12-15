@@ -25,11 +25,9 @@ function validateLogin() {
     if (username === localStorage.getItem('username') &&
         password === localStorage.getItem('password')) {
         window.location.href = 'home.html';
+        invalidLogin.classList.add('hidden');
     } else {
         invalidLogin.classList.remove('hidden');
-        // sleep(3000).then(() => {
-        //     invalidLogin.classList.add('hidden');
-        // });
     }
 };
 
