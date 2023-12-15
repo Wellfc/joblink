@@ -119,3 +119,33 @@ a {
 /* ! ------------------------------------------------------------------------ */
 /* !                                 CONTENT                                  */
 /* ! ------------------------------------------------------------------------ */
+
+:root {
+  /* JobLink Corporate Palette */
+  --joblink-blue: #0277b5;
+  --joblink-blue-dark: #005e8c;
+  --black: #000;
+  --white: #fff;
+  --dark-gray: #313335;
+  --medium-gray: #86888a;
+  --light-gray: #caccce;
+
+  /* Accent Colors */
+  --accent-blue: #00a0dc;
+  --accent-pruple: #8d6cab;
+  --accent-red: #dd5143;
+  --accent-orange: #e68523;
+
+  /* Buttons styles */
+  --button-primary: var(--joblink-blue);
+  --button-primary-hover: var(--joblink-blue-dark);
+  --button-secondary: var(--white);
+  --button-secondary-hover: var(--joblink-blue);
+  --button-border: 1px solid var(--joblink-blue);
+  --button-primary-text-color: var(--white);
+  --button-secondary-text-color: var(--joblink-blue);
+
+  /* Link styles */
+  --link-color: var(--joblink-blue);
+  --link-hover-color: var(--joblink-blue-dark);
+}
