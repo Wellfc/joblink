@@ -46,3 +46,15 @@ function filterArray(array, callback) {
 function create(element, parent = document) {
   return parent.createElement(element);
 }
+
+export {
+  onEvent,
+  getElement,
+  select,
+  selectAll,
+  print,
+  sleep,
+  getRandomNumber,
+  filterArray,
+  create,
+};
