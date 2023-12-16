@@ -45,8 +45,8 @@ hired1234
 
 Login Page
 
-![Login Page](image.png)
+![Login Page](./assets/media/screenshots/image.png)
 
 Home Page
 
-![Home Page](image-1.png)
+![Home Page](./assets/media/screenshots/image-1.png)
