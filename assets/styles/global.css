@@ -129,7 +129,7 @@ a {
   --dark-gray: #313335;
   --medium-gray: #86888a;
   --light-gray: #caccce;
-  --lighter-gray: #F4F2EF;
+  --lighter-gray: #f4f2ef;
 
   /* Accent Colors */
   --accent-blue: #00a0dc;
@@ -149,4 +149,7 @@ a {
   /* Link styles */
   --link-color: var(--joblink-blue);
   --link-hover-color: var(--joblink-blue-dark);
+
+  /* Input styles */
+  --input-bg-color: #ebf2f8;
 }

@@ -11,16 +11,16 @@ const invalidLogin = select(".invalid-login");
 localStorage.setItem("username", "jobseeker");
 localStorage.setItem("password", "hired1234");
 
-print(localStorage.getItem("username"));
-print(localStorage.getItem("password"));
+// print(localStorage.getItem("username"));
+// print(localStorage.getItem("password"));
 
 // Validate the user's login info
 function validateLogin() {
   const username = usernameInput.value.trim();
   const password = passwordInput.value.trim();
 
-  print(username);
-  print(password);
+  // print(username);
+  // print(password);
 
   if (
     username === localStorage.getItem("username") &&

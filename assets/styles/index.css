@@ -130,8 +130,8 @@ input[type="password"] {
   margin-top: 10px;
   padding: 10px;
   border-radius: 5px;
-  background-color: #ebf2f8;
-  border: 1px solid #ebf2f8;
+  background-color: var(--input-bg-color);
+  border: 1px solid var(--input-bg-color);
   transition: all 0.3s ease-in-out;
 }
 
