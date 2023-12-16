@@ -1,38 +1,75 @@
 @import "./global.css";
 
+.login-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.login-image-container {
+  background: url(../media/images/joblink-login-image.png) no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  height: 100svh;
+  position: relative;
+}
+
+.login-image-container::after {
+  content: "";
+  top: 5rem;
+  left: 5rem;
+  position: absolute;
+  background-image: url(../media/images/logo-image.jpeg);
+  background-size: cover;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  z-index: 1000;
+}
+
+.login-image-container::before {
+  content: "JobLink";
+  top: 5rem;
+  left: 12rem;
+  position: absolute;
+  line-height: 60px;
+  color: var(--joblink-blue);
+  font-weight: 700;
+  font-size: 3rem;
+  z-index: 1000;
+}
+
 button {
-  padding: 1.5rem 2.5rem;
+  padding: 1.5rem 6rem;
   font-weight: 500;
   border-radius: 0.4rem;
 }
 
 .button-type-one {
   background-color: var(--button-primary);
-  border: 0.1rem solid var(--button-border);
+  border: var(--button-border);
   transition: 0.2s all ease-in-out;
   color: var(--button-primary-text-color);
 }
 
 .button-type-one:hover {
   background-color: var(--button-primary-hover);
-  border: 0.1rem solid var(--button-border);
+  border: var(--button-border);
 }
 
 .button-type-two {
   background-color: var(--button-secondary);
-  border: 0.1rem solid var(--button-border);
   transition: 0.2s all ease-in-out;
   color: var(--button-secondary-text-color);
+  border: var(--button-border);
 }
 
 .button-type-two:hover {
-  background-color: var(--button-secondary-hover);
-  border: 0.1rem solid var(--button-border);
-  color: var(--button-primary-text-color);
+  color: var(--white);
+  background-color: var(--joblink-blue-dark);
 }
 
 a {
-    color: var(--link-color);
+  color: var(--link-color);
 }
 
 a:hover {
@@ -44,33 +81,29 @@ a:hover {
   color: var(--link-color);
 }
 
-.login-content {
+.login-logo-container {
   display: flex;
-  height: 100vh;
-  width: 100%;
-  gap: 5rem;
-  border-radius: 5px;
-  background-color: var(--white);
+  align-items: center;
+  height: 60px;
+  padding: 5rem 0;
 }
 
-.login-image {
-  width: 80%;
-  background-image: url(../media/images/joblink-login-image-small.png);
-  background-size: cover;
-  border-bottom-left-radius: 5px;
-  border-top-left-radius: 5px; 
+.login-logo-container img {
+  width: 60px;
+  border-radius: 50%;
 }
 
-.login-image img {
-  width: 20%;
-  border-top-left-radius: 5px; 
+.login-logo-container p {
+  color: var(--joblink-blue);
+  font-weight: 700;
+  font-size: 3rem;
+  padding-left: 0.5rem;
 }
 
 .login {
-  width: 50%;
+  padding: 0 8rem;
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   margin: 200px auto 20px;
 }
 
@@ -79,14 +112,21 @@ a:hover {
   color: var(--joblink-blue);
 }
 
-.user-input {
-  width: 80%;
-  display: flex;
-  flex-direction: column;
+.login-title h1 {
+  font-size: 5.6rem;
 }
 
-input[type=text], input[type=password] {
+.user-input {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-top: 2rem;
+}
+
+input[type="text"],
+input[type="password"] {
   height: 45px;
+  width: 400px;
   margin-top: 10px;
   padding: 10px;
   border-radius: 5px;
@@ -95,7 +135,8 @@ input[type=text], input[type=password] {
   transition: all 0.3s ease-in-out;
 }
 
-input[type=text]:hover, input[type=password]:hover {
+input[type="text"]:hover,
+input[type="password"]:hover {
   border-color: var(--link-hover-color);
 }
 
@@ -125,6 +166,8 @@ input[type=text]:hover, input[type=password]:hover {
 
 .buttons-container {
   margin-bottom: 50px;
+  display: flex;
+  gap: 3rem;
 }
 
 .info-links {
@@ -135,8 +178,10 @@ input[type=text]:hover, input[type=password]:hover {
 }
 
 .policies {
-  width: 60%;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 2fr;
+  gap: 1rem 1rem;
 }
 
 .copyright {
