@@ -192,22 +192,25 @@ main {
   align-items: center;
 }
 
-.posting-box-footer-container div {
-  height: 4rem;
+.post-button-container {
+  background-color: var(--joblink-blue);
+  border-radius: 0.5rem;
+  text-align: center;
 }
 
-
-.file-label,
-.post-button-container {
-  padding: 0.2rem 1rem;
-  cursor: pointer;
-  background-color: var(--joblink-blue);
+.post-button {
+  padding: 0.5rem 3rem;
   color: var(--white);
+  background-color: var(--joblink-blue);
   border-radius: 0.5rem;
 }
 
 .file-label {
+  cursor: pointer;
+  border-radius: 0.5rem;
   padding: 0.5rem 1rem;
+  color: var(--white);
+  background-color: var(--joblink-blue);
 }
 
 .fa-upload {
@@ -371,22 +374,25 @@ main {
 footer {
   color: var(--joblink-blue);
   background-color: var(--lighter-gray);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .footer-grid-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 2fr 2fr 2fr 1fr;
 }
 
 .footer-grid-container div {
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
 }
 
 .footer-grid-container div a {
   display: inline-block;
-  padding: 0.5rem 0;
   transition: 0.2s all ease-in-out;
+  padding-top: 0.5rem;
 }
 
 .footer-grid-container div a:hover {
@@ -394,6 +400,9 @@ footer {
   color: var(--joblink-blue-dark);
 }
 
-.copyright {
-  padding: 0.5rem 0;
+.copyright-container {
+  display: flex;
+  text-align: right;
+  flex-direction: column;
+  justify-content: flex-end;
 }
