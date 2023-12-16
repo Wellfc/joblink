@@ -36,7 +36,7 @@ function setUsers(users) {
   showSpinner();
 
   // Clear existing content in the usersContainer
-  usersContainer.innerHTML = "";
+  // usersContainer.innerHTML = "";
 
   // Create and append <li> elements for each user
   users.forEach((user) => {

@@ -297,6 +297,10 @@ main {
   padding: 0 0.5rem;
 }
 
+.interactions-container i {
+  cursor: pointer;
+}
+
 .fa-heart {
   color: var(--accent-red);
 }
@@ -311,10 +315,6 @@ main {
   display: grid;
   align-content: start;
   gap: 2rem 0;
-  background-color: var(--white);
-  border: 1px solid var(--light-gray);
-  border-radius: 0.5rem;
-  padding: 1.5rem;
 }
 
 .people-you-may-know-container p {
@@ -325,6 +325,10 @@ main {
   display: grid;
   width: 100%;
   gap: 2rem;
+  background-color: var(--white);
+  border: 1px solid var(--light-gray);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
 }
 
 .user {
