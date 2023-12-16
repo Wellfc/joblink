@@ -1,9 +1,11 @@
 "use strict";
 
-const usersContainer = document.querySelector(".users-container");
-const spinner = document.querySelector(".spinner");
+import { onEvent, select, sleep, print, create } from "./utils.js";
 
-const URL = "https://randomuser.me/api/?nat=CA&results=10&seed=same";
+const usersContainer = select(".users-container");
+const spinner = select(".spinner");
+
+const URLUSERS = "https://randomuser.me/api/?nat=CA&results=10&seed=same";
 
 const options = {
   method: "GET",
@@ -15,7 +17,7 @@ const options = {
 
 async function getUsers() {
   try {
-    const result = await fetch(URL, options);
+    const result = await fetch(URLUSERS, options);
     if (!result.ok) {
       throw new Error(`${result.statusText} (${result.status})`);
     }
@@ -38,27 +40,27 @@ function setUsers(users) {
 
   // Create and append <li> elements for each user
   users.forEach((user) => {
-    const div = document.createElement("div");
+    const div = create("div");
     div.classList.add("user");
     usersContainer.appendChild(div);
 
     // Create and append <img> elements for each user
-    const img = document.createElement("img");
+    const img = create("img");
     img.src = user.picture.large;
     img.alt = `${user.name.first} ${user.name.last}`;
     div.appendChild(img);
 
     // Create and append <li> elements for each user
-    const li = document.createElement("li");
+    const li = create("li");
     li.textContent = `${user.name.first} ${user.name.last}`;
     div.appendChild(li);
 
-    const plusIcon = document.createElement("i");
+    const plusIcon = create("i");
     plusIcon.classList.add("fa-solid", "fa-circle-plus");
     div.appendChild(plusIcon);
 
     // Create and append <li> elements for each user
-    const liCity = document.createElement("li");
+    const liCity = create("li");
     liCity.textContent = `${user.location.state}`;
     div.appendChild(liCity);
   });
@@ -77,3 +79,116 @@ function hideSpinner() {
 
 // Fetch and display users on page load
 getUsers();
+
+// ! Posting functionality -----------------------------------------------------
+
+let file = null;
+const fileName = select("#file-name");
+const postButton = select(".post-button");
+const textArea = select("#posting");
+const inputFile = select("#file");
+const posts = select(".posting-area-past-posts-container");
+let isFileSelected = false;
+let userDisplayName = "Maya Miller";
+
+// Functions
+
+// Clear the text area and file input
+function clearInputs() {
+  textArea.value = "";
+  fileName.innerHTML = `<i class="fas fa-upload"></i>`;
+  isFileSelected = false;
+}
+
+// Get the current date
+function getDate() {
+  const parameters = {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  };
+
+  return new Date().toLocaleDateString("en-ca", parameters);
+}
+
+// Display the file name when a file is selected
+function displayFileName() {
+  file = inputFile.files[0];
+  fileName.textContent = file.name;
+  isFileSelected = true;
+}
+
+// Create a new post when the post button is clicked
+function newPost() {
+  // Validate the text area and file input before creating a new post
+  if (textArea.value.trim() !== "" || isFileSelected) {
+    if (isFileSelected) {
+      const post = create("div");
+      const postImg = create("img");
+      postImg.src = URL.createObjectURL(file);
+      post.innerHTML = `
+      <div class="post-container">
+      <div class="post-header-container">
+        <div class="post-photo-and-information">
+          <img src="./assets/media/images/profile-mock.jpeg" alt="Post User Photo">
+          <div>
+            <p>${userDisplayName}</p>
+            <p>Software Developer</p>
+          </div>
+        </div>
+        <div class="post-options">
+          <i class="fa-solid fa-ellipsis"></i>
+          <p>${getDate()}</p>
+        </div>
+      </div>
+      <div class="post-media-container">
+        <p>${textArea.value.trim()}</p>
+        <img src="${postImg.src}" alt="">
+      </div>
+      <div class="interactions-container">
+        <i class="fa-solid fa-heart"></i>
+        <i class="fa-regular fa-comment"></i>
+        <i class="fa-solid fa-share-nodes"></i>
+      </div>
+    </div>`;
+      posts.prepend(post);
+      clearInputs();
+    } else {
+      const post = create("div");
+      post.innerHTML = `
+      <div class="post-container">
+      <div class="post-header-container">
+        <div class="post-photo-and-information">
+          <img src="./assets/media/images/profile-mock.jpeg" alt="Post User Photo">
+          <div>
+            <p>${userDisplayName}</p>
+            <p>Software Developer</p>
+          </div>
+        </div>
+        <div class="post-options">
+          <i class="fa-solid fa-ellipsis"></i>
+          <p>${getDate()}</p>
+        </div>
+      </div>
+      <div class="post-media-container">
+        <p>${textArea.value.trim()}</p>
+      </div>
+      <div class="interactions-container">
+        <i class="fa-solid fa-heart"></i>
+        <i class="fa-regular fa-comment"></i>
+        <i class="fa-solid fa-share-nodes"></i>
+      </div>
+    </div>
+    `;
+      posts.prepend(post);
+      clearInputs();
+    }
+  } else {
+    textArea.focus();
+  }
+}
+
+// Event listeners
+
+onEvent("click", postButton, newPost);
+onEvent("change", inputFile, displayFileName);

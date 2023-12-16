@@ -209,15 +209,13 @@ main {
   cursor: pointer;
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
-  color: var(--white);
-  background-color: var(--joblink-blue);
 }
 
 .fa-upload {
-  font-size: 1.5rem;
+  font-size: 2rem;
+  color: var(--joblink-blue);
 }
 
-.file-label:hover,
 .post-button-container:hover {
   background-color: var(--joblink-blue-dark);
 }

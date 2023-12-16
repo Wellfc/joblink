@@ -27,7 +27,7 @@
 	<meta property="og:type" content="website">
 
 	<!-- CSS and JS -->
-	<script src="./assets/script/home.js" async></script>
+	<script src="./assets/script/home.js" type="module"></script>
 	<link rel="stylesheet" href="./assets/styles/global.css">
 	<link rel="stylesheet" href="./assets/styles/home.css">
 </head>
@@ -108,19 +108,10 @@
 						</div>
 						<div class="posting-box-footer-container">
 							<div class="input-file">
-								<label for="file" class="file-label">
+								<input type="file" id="file" name="file" multiple>
+								<label id="file-name" for="file" class="file-label">
 									<i class="fas fa-upload"></i>
-									<input type="file" id="file" name="file" multiple>
 								</label>
-								<a href="">
-									<i class="fa-solid fa-newspaper"></i>
-								</a>
-								<a href="">
-									<i class="fa-solid fa-camera"></i>
-								</a>
-								<a href="">
-									<i class="fa-solid fa-video"></i>
-								</a>
 							</div>
 							<div class="selected-image-feedback">
 							</div>
