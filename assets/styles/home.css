@@ -196,13 +196,18 @@ main {
   height: 4rem;
 }
 
+
 .file-label,
 .post-button-container {
-  padding: 0.5rem 1rem;
+  padding: 0.2rem 1rem;
   cursor: pointer;
   background-color: var(--joblink-blue);
   color: var(--white);
   border-radius: 0.5rem;
+}
+
+.file-label {
+  padding: 0.5rem 1rem;
 }
 
 .fa-upload {
