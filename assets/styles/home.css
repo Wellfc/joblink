@@ -108,6 +108,7 @@ main {
 
 .fa-pen-to-square {
   place-self: end;
+  color: var(--medium-gray);
   cursor: pointer;
 }
 
@@ -136,6 +137,7 @@ main {
 }
 
 .fa-link {
+  color: var(--link-color);
   cursor: pointer;
 }
 
@@ -332,7 +334,7 @@ main {
 
 .people-you-may-know-container div:first-child {
   background-color: var(--white);
-  padding: 2.2rem 1.1rem;
+  padding: 2.2rem 2rem;
 }
 
 .people-you-may-know-container p {
@@ -363,7 +365,7 @@ main {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   border-radius: 5px;
   background-color: var(--white);
-  padding: 3.1rem 1.1rem;
+  padding: 4rem 2rem;
   margin-top: 0.2rem;
   gap: 1rem;
   cursor: pointer;
