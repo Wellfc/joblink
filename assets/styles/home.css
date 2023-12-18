@@ -9,9 +9,9 @@ header {
   overflow: hidden;
 }
 
-header div {
-  /* outline: auto; */
-}
+/* header div {
+  outline: auto;
+} */
 
 .header-desktop-nav-bar {
   display: flex;
@@ -98,7 +98,7 @@ main {
   display: grid;
   place-items: start;
   justify-items: center;
-  gap: 1rem 0;
+  /* gap: 1rem 0; */
   background-color: var(--white);
   /* border: 1px solid var(--light-gray); */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
@@ -126,8 +126,8 @@ main {
 }
 
 .profile-card-user-information p + p {
-  font-size: 1.5rem;
-  color: var(--dark-gray);
+  font-size: 1rem;
+  color: var(--medium-gray);
 }
 
 .profile-card-link-container {
@@ -140,7 +140,13 @@ main {
 }
 
 .profile-card-link-container a {
-  font-size: 1.1rem;
+  color: var(--medium-gray);
+  font-size: 1rem;
+}
+
+.profile-card-link-container a:hover {
+  color: var(--link-hover-color);
+  text-decoration: underline;
 }
 
 /* * Posting area ----------------------------------------------------------- */
@@ -149,11 +155,11 @@ main {
   display: grid;
   place-items: start center;
   gap: 1rem 0;
-  background-color: var(--white);
+  /* background-color: var(--white); */
   /* border: 1px solid var(--light-gray); */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); */
   border-radius: 0.5rem;
-  padding: 1.5rem;
+  /* padding: 1.5rem; */
 }
 
 .posting-form {
@@ -162,10 +168,11 @@ main {
   /* border: 1px solid var(--light-gray); */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   border-radius: 5px;
-  margin: 1rem auto;
+  /* margin: 1rem auto; */
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  background-color: var(--white);
 }
 
 .posting-input-container textarea {
@@ -235,8 +242,9 @@ main {
   /* border: 1px solid var(--light-gray); */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   border-radius: 5px;
-  margin: 2rem auto;
+  margin: 1.3rem auto;
   gap: 1rem;
+  background-color: var(--white);
 }
 
 .post-header-container {
@@ -253,6 +261,7 @@ main {
 
 .post-photo-and-information > div > p:first-child {
   font-weight: 600;
+  font-size: 1.3rem;
 }
 
 .post-photo-and-information > div > p:last-child {
@@ -265,7 +274,7 @@ main {
 }
 
 .post-header-container div:last-child {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .post-header-container div:last-child i {
@@ -318,7 +327,12 @@ main {
 .people-you-may-know-container {
   display: grid;
   align-content: start;
-  gap: 2rem 0;
+  /* gap: 2rem 0; */
+}
+
+.people-you-may-know-container div:first-child {
+  background-color: var(--white);
+  padding: 2.2rem 1.1rem;
 }
 
 .people-you-may-know-container p {
@@ -329,12 +343,12 @@ main {
 .users-container {
   display: grid;
   width: 100%;
-  gap: 2rem;
-  background-color: var(--white);
+  /* gap: 2rem; */
+  /* background-color: var(--white); */
   /* border: 1px solid var(--light-gray); */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); */
   border-radius: 0.5rem;
-  padding: 1.5rem;
+  /* padding: 1.5rem; */
 }
 
 .user {
@@ -348,7 +362,9 @@ main {
   place-items: center start;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   border-radius: 5px;
-  padding: 2.1rem;
+  background-color: var(--white);
+  padding: 3.1rem 1.1rem;
+  margin-top: 0.2rem;
   gap: 1rem;
   cursor: pointer;
 }
@@ -356,8 +372,8 @@ main {
 .user li {
   list-style: none;
   grid-area: b;
-  font-size: 1.1rem;
-  font-weight: 500;
+  font-size: 1.3rem;
+  font-weight: 600;
 }
 
 .user img {
@@ -369,6 +385,7 @@ main {
 .user li:last-child {
   color: var(--medium-gray);
   font-size: 1rem;
+  font-weight: 400;
   grid-area: d;
 }
 
@@ -401,11 +418,12 @@ footer {
   display: inline-block;
   transition: 0.2s all ease-in-out;
   padding-top: 0.5rem;
+  color: var(--link-color);
 }
 
 .footer-grid-container div a:hover {
   text-decoration: underline;
-  color: var(--joblink-blue-dark);
+  color: var(--link-hover-color);
 }
 
 .copyright-container {
