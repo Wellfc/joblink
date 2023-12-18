@@ -122,56 +122,41 @@ function displayFileName() {
 function newPost() {
   // Validate the text area and file input before creating a new post
   if (textArea.value.trim() !== "" || isFileSelected) {
+    const post = create("div");
     if (isFileSelected) {
-      const post = create("div");
       const postImg = create("img");
       postImg.src = URL.createObjectURL(file);
-      post.innerHTML = `
-      <div class="post-container">
-      <div class="post-header-container">
-        <div class="post-photo-and-information">
-          <img src="./assets/media/images/profile-mock.jpeg" alt="Post User Photo">
-          <div>
-            <p>${userDisplayName}</p>
-            <p>Software Developer</p>
-          </div>
-        </div>
-        <div class="post-options">
-          <i class="fa-solid fa-ellipsis"></i>
-          <p>${getDate()}</p>
-        </div>
-      </div>
-      <div class="post-media-container">
-        <p>${textArea.value.trim()}</p>
-        <img src="${postImg.src}" alt="">
-      </div>
-      <div class="interactions-container">
-        <i class="fa-solid fa-heart"></i>
-        <i class="fa-regular fa-comment"></i>
-        <i class="fa-solid fa-share-nodes"></i>
-      </div>
-    </div>`;
-      posts.prepend(post);
-      clearInputs();
+      post.innerHTML = getPostHtml(userDisplayName, getDate(), textArea.value.trim(), postImg.src);
     } else {
-      const post = create("div");
-      post.innerHTML = `
-      <div class="post-container">
+      post.innerHTML = getPostHtml(userDisplayName, getDate(), textArea.value.trim());
+    }
+    posts.prepend(post);
+    clearInputs();
+  } else {
+    textArea.focus();
+  }
+}
+
+// Get the post HTML element
+function getPostHtml(user, date, text, img = "") {
+  return `
+    <div class="post-container">
       <div class="post-header-container">
         <div class="post-photo-and-information">
           <img src="./assets/media/images/profile-mock.jpeg" alt="Post User Photo">
           <div>
-            <p>${userDisplayName}</p>
+            <p>${user}</p>
             <p>Software Developer</p>
           </div>
         </div>
         <div class="post-options">
           <i class="fa-solid fa-ellipsis"></i>
-          <p>${getDate()}</p>
+          <p>${date}</p>
         </div>
       </div>
       <div class="post-media-container">
-        <p>${textArea.value.trim()}</p>
+        <p>${text}</p>
+        <img src="${img}" alt="">
       </div>
       <div class="interactions-container">
         <i class="fa-solid fa-heart"></i>
@@ -179,13 +164,7 @@ function newPost() {
         <i class="fa-solid fa-share-nodes"></i>
       </div>
     </div>
-    `;
-      posts.prepend(post);
-      clearInputs();
-    }
-  } else {
-    textArea.focus();
-  }
+  `;
 }
 
 // Event listeners
