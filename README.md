@@ -16,7 +16,7 @@ with the professional community.
 
 ---
 
-[Click here to see the demo](https://stefanoturcarelli.github.io/social-media-platform/)
+[Click here to see the demo](https://Wellfc.github.io/joblink/)
 
 ### Login Credentials
 
